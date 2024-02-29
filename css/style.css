@@ -13,6 +13,8 @@
 :root {
   --primary: #5956e8;
   --black: #181818;
+  --white: #fffefe;
+  --borderRadius: 1rem;
 }
 
 html {
@@ -41,7 +43,7 @@ ol {
 #navbar {
   padding-top: 3.4rem;
   padding-bottom: 5.1rem;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .nav {
@@ -58,13 +60,15 @@ ol {
 
 .nav_list {
   display: flex;
-
   gap: 5rem;
   li {
     font-weight: 500;
     font-size: 1.8rem;
     a {
       color: var(--black);
+      &:hover {
+        color: var(--primary);
+      }
     }
   }
 }
@@ -73,8 +77,47 @@ ol {
   background-color: var(--primary);
   font-weight: 500;
   font-size: 1.8rem;
-  color: #fff;
+  color: var(--white);
   padding: 1.3rem 2.35rem;
-  border-radius: 1rem;
+  border-radius: var(--borderRadius);
 }
 /* Navbar css End */
+
+#banner {
+  background-color: var(--primary);
+  padding-top: 16.5rem;
+  padding-bottom: 19.968rem;
+  .banner_wrapper {
+    display: flex;
+    align-items: center;
+    .banner_text_box {
+      h1 {
+        font-weight: 700;
+        font-size: 6.5rem;
+        color: var(--white);
+        line-height: 8rem;
+      }
+      p {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.7rem;
+        color: var(--white);
+        width: 54.2rem;
+
+        margin-top: 2.5rem;
+        margin-bottom: 3rem;
+      }
+      .banner_btn {
+        background-color: var(--white);
+        color: var(--primary);
+        font-size: 1.8rem;
+        font-weight: 500;
+        padding: 1.3rem 2.2rem;
+        border-radius: var(--borderRadius);
+        border: none;
+        outline: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
