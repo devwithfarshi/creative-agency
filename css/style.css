@@ -38,6 +38,23 @@ ol {
   margin: 0 auto;
 }
 
+.section_header {
+  text-align: center;
+  h2.title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--black);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+  }
+  p.sub__title {
+    font-size: 1.6rem;
+    color: var(--para);
+    width: 54.2rem;
+    margin: 0 auto;
+  }
+}
+
 /* Reuseable css end */
 
 /* Navbar css Start */
@@ -125,24 +142,7 @@ ol {
 }
 
 #services {
-  margin-bottom: 200px;
   padding-top: 8.3rem;
-  .section_header {
-    text-align: center;
-    h2.title {
-      font-size: 4rem;
-      font-weight: 700;
-      color: var(--black);
-      text-transform: capitalize;
-      margin-bottom: 2rem;
-    }
-    p.sub__title {
-      font-size: 1.6rem;
-      color: var(--para);
-      width: 54.2rem;
-      margin: 0 auto;
-    }
-  }
   .services_wrapper {
     margin-top: 5rem;
     display: flex;
@@ -187,6 +187,54 @@ ol {
         line-height: 2.7rem;
         font-size: 1.6rem;
         width: 27.4rem;
+      }
+    }
+  }
+}
+
+#portfolio {
+  margin-bottom: 200px;
+  padding-top: 10rem;
+  .portfolio_wrapper {
+    display: flex;
+    gap: 3rem;
+    .portfolio_box {
+      border: 1px solid;
+      position: relative;
+      cursor: pointer;
+      border-radius: var(--borderRadius);
+      img {
+        width: 100%;
+      }
+      .portfolio_overlay {
+        position: absolute;
+        bottom: 1.9rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--primary);
+        padding: 2.45rem 4rem;
+        border-radius: var(--borderRadius);
+        text-align: center;
+        width: 23rem;
+        h4 {
+          font-weight: 600;
+          font-size: 2rem;
+          line-height: 2.7rem;
+          color: var(--white);
+        }
+        a {
+          margin-top: 1rem;
+          line-height: 2.7rem;
+          font-size: 1.6rem;
+          color: var(--white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          .right_arrow {
+            font-size: 2.4rem;
+          }
+        }
       }
     }
   }
