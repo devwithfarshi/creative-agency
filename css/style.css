@@ -293,3 +293,61 @@ ol {
     }
   }
 }
+
+/* Switch */
+
+.switch_container {
+  #switch_checkbox:checked ~ .switchWrpper {
+    background-color: var(--primary);
+    .switch_btn {
+      left: auto;
+      right: 0.6rem;
+      background-color: #13c6e6;
+      span {
+        &:first-child {
+          display: inline-block;
+        }
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.switchWrpper {
+  height: 5rem;
+  width: 10rem;
+  background-color: #57575763;
+  border-radius: 3rem;
+  position: relative;
+
+  transition: all 250ms ease-in-out;
+
+  .switch_btn {
+    height: 4rem;
+    cursor: pointer;
+    width: 4rem;
+    text-align: center;
+    line-height: 4rem;
+
+    background: rgb(40, 224, 111);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.6rem;
+    transition: all 250ms ease-in-out;
+    /* right: 0.6rem; */
+    border-radius: 50%;
+
+    span {
+      font-size: 1.8rem;
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+}
