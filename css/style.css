@@ -81,12 +81,43 @@ ol {
   display: flex;
   gap: 5rem;
   li {
+    position: relative;
     font-weight: 500;
     font-size: 1.8rem;
-    a {
+    > a {
       color: var(--black);
       &:hover {
         color: var(--primary);
+      }
+    }
+
+    &:hover {
+      .dropDown {
+        opacity: 1;
+        visibility: visible;
+        top: 2rem;
+      }
+    }
+
+    .dropDown {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 250ms ease-in-out;
+      position: absolute;
+      top: 5rem;
+      left: 30%;
+      -webkit-transition: all 250ms ease-in-out;
+      -moz-transition: all 250ms ease-in-out;
+      -ms-transition: all 250ms ease-in-out;
+      -o-transition: all 250ms ease-in-out;
+      > div {
+        background-color: teal;
+        margin: 1rem 0;
+        padding: 1rem 1.5rem;
+
+        a {
+          color: white;
+        }
       }
     }
   }
